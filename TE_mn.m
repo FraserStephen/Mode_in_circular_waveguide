@@ -14,7 +14,7 @@ function [E_theta, E_r, Hz, H_theta, H_r] = TE_mn(m, n, THETA, R, Z, phi, R_wave
     k = w/(3e9);
     beta = sqrt(k^2 - k_c^2);
     
-    
+    %A=0 B=1
     Hz = besselj(m,k_c*R) .* cos(m*(THETA + phi)) .* exp(-j*Z);
     H_r = -j*beta/k_c* cos(m*(THETA + phi)).* Diff_Bessel(m, k_c*R)*exp(-j*Z);
     H_theta = j*beta*m./(k_c^2*R).* cos(m*(THETA + phi)) .* exp(-j*Z);

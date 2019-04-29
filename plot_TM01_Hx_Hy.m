@@ -16,41 +16,41 @@ Z = 0;
 [THETA, R] = meshgrid(theta, r); % Éú³ÉÍø¸ñ
 
 
-d = 3*pi/2;
-[E_theta, E_r, E_z] = TE_mn(2,1,THETA,R, d, 0, R_waveguide,w);
+d = 0;
+[E_theta, E_r, Hz, H_theta, H_r] = TM_mn(0,1,THETA,R, d, 0, R_waveguide,w);
 
-Ey = E_r.*cos(THETA) - E_theta.*sin(THETA);
-Ex = E_r.*sin(THETA) + E_theta.*cos(THETA);
+Hx = H_r.*cos(THETA) - H_theta.*sin(THETA);
+Hy = H_r.*sin(THETA) + H_theta.*cos(THETA);
 
 %»æÍ¼
-[X, Y, E_x] = pol2cart(THETA, R, Ex);
-[X, Y, E_y] = pol2cart(THETA, R, Ey);
+[X, Y, H_x] = pol2cart(THETA, R, Hx);
+[X, Y, H_y] = pol2cart(THETA, R, Hy);
 
 
 figure
-mesh(X, Y, angle(Ex));
-title('Ex phase');
+mesh(X, Y, angle(H_x));
+title('Hx phase');
 colormap Jet
 colorbar
 view(0,90);
 
 figure
-mesh(X, Y, abs(Ex));
-title('Ex mag');
+mesh(X, Y, abs(H_x));
+title('Hx mag');
 colormap Jet
 colorbar
 view(0,90);
 
 figure
-mesh(X, Y, angle(Ey));
-title('Ey phase');
+mesh(X, Y, angle(Hy));
+title('Hy phase');
 colormap Jet
 colorbar
 view(0,90);
 
 figure
-mesh(X, Y, abs(Ey));
-title('Ey mag');
+mesh(X, Y, abs(Hy));
+title('Hy mag');
 colormap Jet
 colorbar
 view(0,90);

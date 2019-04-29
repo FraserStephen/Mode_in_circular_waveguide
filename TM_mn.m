@@ -15,10 +15,10 @@ function [E_r, E_theta, Ez, H_r, H_theta] = TM_mn(m, n, THETA, R, Z, phi, R_wave
     k = w/(3e9);
     beta = sqrt(k^2 - k_c^2);
     
-    %A=1 B=0
+    %A=0 B=1
     Ez = besselj(m,k_c*R) .* cos(m*(THETA + phi)) .* exp(-j*Z);
-    E_theta = -j*beta/k_c.*cos(m*(THETA+phi)).*Diff_Bessel(m, k_c*R)*exp(-j*Z);
-    E_r = j*beta*m./(k_c^2*R).*sin(m*(THETA+phi)).*besselj(m, k_c*R)*exp(-j*Z);
-    H_r = j*w*die_con*m./(k_c^2*R).*cos(m*(THETA+phi)).*besselj(m, k_c*R)*exp(-j*Z);
-    H_theta = -j*w*die_con/k_c*sin(m*(THETA+phi)).*besselj(m,k_c*R)*exp(-j*Z);
+    E_r = -j*beta/(k_c).*cos(m*(THETA+phi)).*Diff_Bessel(m, k_c*R)*exp(-j*Z);
+    E_theta = j*beta*m./(k_c^2*R).*sin(m*(THETA+phi)).*besselj(m, k_c*R)*exp(-j*Z);
+    H_r = -j*w*die_con*m./(k_c^2*R).*sin(m*(THETA+phi)).*besselj(m, k_c*R)*exp(-j*Z);
+    H_theta = j*w*die_con/k_c*cos(m*(THETA+phi)).*Diff_Bessel(m,k_c*R)*exp(-j*Z);
 end %function

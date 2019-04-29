@@ -13,7 +13,7 @@
 * plot_TE21_Et_vector.m 计算TE21模式横向场分布（场强+方向）
 * plot_TE21_Ex_Ey.m 计算TE21模式的横向场（Ex和Ey分量）
 
-##结果示例
+## 结果示例
 
  ![TE21模式横向场分布](https://raw.githubusercontent.com/FraserStephen/Mode_in_circular_waveguide/master/Pic/TE21_Et_vector.png)
 

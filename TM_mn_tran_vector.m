@@ -1,4 +1,4 @@
-function [] = TE_mn_tran_vector(m, n, Z, phi, R_waveguide, w)
+function [] = TM_mn_tran_vector(m, n, Z, phi, R_waveguide, w)
 %function：计算TM模式下，横向电场分布的向量图和强度分布图
 %Input:
     %m, n 模式数

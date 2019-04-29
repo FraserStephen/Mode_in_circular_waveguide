@@ -15,6 +15,10 @@
 
 ## 结果示例
 
+* TE21模式横向场分布
+
  ![TE21模式横向场分布](https://raw.githubusercontent.com/FraserStephen/Mode_in_circular_waveguide/master/Pic/TE21_Et_vector.png)
+
+* TM01模式横向场分布
 
  ![TM01模式的横向场分布](https://raw.githubusercontent.com/FraserStephen/Mode_in_circular_waveguide/master/Pic/TM01_Et_vector.png)

@@ -17,8 +17,8 @@ Z = 0;
 
 
 d = 0;
-[E_theta1, E_r1, H_z1] = TE_mn(2,1,THETA,R, d, 0, R_waveguide,w);%TE11
-[E_theta2, E_r2, H_z2] = TE_mn(2,1,THETA,R, d, pi/2, R_waveguide,w);%TE11(pi/2)
+[E_theta1, E_r1, H_z1, H_theta1, H_r1] = TE_mn(1,1,THETA,R, d, 0, R_waveguide,w);%TE11
+[E_theta2, E_r2, H_z2,  H_theta2, H_r2] = TE_mn(1,1,THETA,R, d, pi/2, R_waveguide,w);%TE11(pi/2)
 H_z = H_z1 + j*H_z2;%TE11 + j*TE11
 
 [X, Y, Hz] = pol2cart(THETA, R, H_z);%×ø±êÖá±ä»»

@@ -2,6 +2,8 @@
 clear
 close all
 
+%绘制TE21模式的横向电场
+
 j = sqrt(-1);
 
 lamda = 100*1e-3; %0.3m 传输波长

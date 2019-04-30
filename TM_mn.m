@@ -1,4 +1,4 @@
-function [E_r, E_theta, Ez, H_r, H_theta] = TM_mn(m, n, THETA, R, Z, phi, R_waveguide, w)
+function [E_theta, E_r, Ez, H_r, H_theta] = TM_mn(m, n, THETA, R, Z, phi, R_waveguide, w)
 %Input:
     %m, n 模式数
     %THETA， R， Z 坐标系（柱坐标）

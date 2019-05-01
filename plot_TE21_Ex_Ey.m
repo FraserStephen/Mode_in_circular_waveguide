@@ -3,7 +3,7 @@ clear
 close all
 
 j = sqrt(-1);
-
+ 
 lamda = 100*1e-3; %0.3m ´«Êä²¨³¤
 freq = 1e9;
 w = 2*pi*freq;

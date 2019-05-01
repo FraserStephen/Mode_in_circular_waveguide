@@ -2,6 +2,7 @@
 clear
 close all
 
+%绘制TE11模式的横向场强度分布
 j = sqrt(-1);
 
 lamda = 100*1e-3; %0.3m 传输波长

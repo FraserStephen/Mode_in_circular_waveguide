@@ -12,4 +12,4 @@ w = 2*pi*freq;
 R_waveguide = 300e-3;
 
 %µ÷ÓÃ»æÍ¼º¯Êı
-TM_mn_tran_vector(1,1, 2*pi/4, 0, R_waveguide, w);
+TE_mn_tran_vector(1,1, 2*pi/4, 0, R_waveguide, w);
